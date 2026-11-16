@@ -1,4 +1,4 @@
-const VERSION = '3.0.0';
+const VERSION = '3.1.0';
 const CACHE_NAME = `paidchat-shell-${VERSION}`;
 const HOME = new URL('./', self.registration.scope).href;
 
