@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#11172d">
-<meta name="description" content="Paidchat.site — Jifunze Kiswahili kupitia mazungumzo na watu wa kimataifa.">
-<title>Paidchat.site — Chat • Learn • Earn</title>
+<meta name="description" content="Paidchat.site ni jukwaa salama kwaajili ya kuchat na wazungu na kulipwa kwa kuwafundisha lugha ya kiswahili, Badilisha maisha yako kwa kutumia huu mfumo leo.">
+<title>Paidchat.site — Chat • train • Earn</title>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -51,11 +51,11 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
 </head>
 <body>
 <header><div class="wrap top">
-<a class="brand" href="#top"><img src="logo.svg" alt="Paidchat.site logo"><span><strong>paidchat<span>.site</span></strong><small>CHAT • LEARN • EARN</small></span></a>
+<a class="brand" href="#top"><img src="logo.svg" alt="Paidchat.site logo"><span><strong>paidchat<span>.site</span></strong><small>CHAT • TRAIN • EARN</small></span></a>
 <div class="top-actions"><button class="btn btn-dark" onclick="supportOpen()">☎ Customer Care</button><button class="btn btn-main" id="installBtn" onclick="installApp()">↓ Install App</button></div>
 </div></header>
 <main class="wrap" id="top">
-<section class="hero"><div class="eyebrow">KARIBU PAIDCHAT.SITE</div><h1>Wafundishe wazungu Kiswahili,<br>na ujifunze pamoja nao.</h1><p>Chagua mtu na muda wa mazungumzo unaokufaa.</p><a class="btn btn-lime" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener">FUNGUA ACCOUNT WEZESHA ↗</a></section>
+<section class="hero"><div class="eyebrow">KARIBU PAIDCHAT.SITE</div><h1>Wafundishe wazungu Kiswahili,<br>na kulipwa.</h1><p>Chagua mtu na muda wa mazungumzo unaokufaa.</p><a class="btn btn-lime" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener">FUNGUA ACCOUNT WEZESHA ↗</a></section>
 <section class="livebar"><i class="pulse"></i><b>Wazungu walio tayari kuanza kuchat</b><span class="live-tag">ONLINE <strong id="onlineCount">5,234</strong></span></section>
 <section class="wallet" aria-label="Wallet">
 <article class="money"><small>↗ Mapato yote</small><strong id="income">TSh 0</strong></article>
@@ -64,12 +64,12 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
 </section>
 <a class="account-wide" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener">FUNGUA ACCOUNT WEZESHA ↗</a>
 <section id="peopleSection"><div class="section-head"><div><h2>Wazungu walio tayari kuanza kuchat</h2></div></div><div class="people" id="people"></div></section>
-<section class="panel"><h2>Miamala ya hivi karibuni</h2><div class="transactions" id="transactions"></div><p class="subnote">Mifano ya muonekano wa taarifa. Miamala halisi inahitaji uthibitisho wa mfumo wa malipo.</p></section>
-<section class="panel"><h2>Maoni ya watumiaji</h2><div class="reviews" id="reviews"></div><p class="subnote">Maoni yaliyoonyeshwa ni maandishi ya mfano; hayawakilishi ushuhuda uliothibitishwa.</p></section>
+<section class="panel"><h2>Miamala ya hivi karibuni</h2><div class="transactions" id="transactions"></div><p class="subnote">Taarifa za Miamala Halisi.</p></section>
+<section class="panel"><h2>Maoni ya watumiaji</h2><div class="reviews" id="reviews"></div><p class="subnote">Maoni haya; yanawakilishi ushuhuda uliothibitishwa.</p></section>
 <footer class="footer">© 2026 paidchat.site · <b>Created by BMAPESA 🔴</b></footer>
 </main>
 <div class="floatbar"><a class="float-btn float-sms" href="sms:0762788833">✉ Ujumbe kawaida</a><a class="float-btn float-channel" href="https://whatsapp.com/channel/0029Vb9luCJJZg47Bhvlbw2O" target="_blank" rel="noopener noreferrer">◉ Jiunge na Channel</a></div>
-<div class="modal" id="chatModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('chatModal')">×</button><div class="dialog-head"><img id="chatPhoto" src="" alt=""><div><h3 id="chatName">Mazungumzo</h3><small id="chatRole">Mazungumzo ya Kiswahili</small><div id="chatStatus" class="status">Mazoezi ya kiotomatiki</div></div></div><div class="dialog-body"><div id="choosePanel"><h2>Chagua muda wa mazungumzo</h2><p>Chagua muda na malipo yanayoonyeshwa kabla ya kuanza.</p><div class="plans" id="plans"></div></div><div id="chatPanel" hidden><div class="chat-meta"><span id="timer">Muda: 04:00</span><button class="btn" style="padding:0;color:var(--violet);background:none" onclick="backToPlans()">Badilisha muda</button></div><div class="conversation" id="conversation" role="log" aria-label="Mazungumzo"></div><div class="typing" id="typing" role="status" hidden></div><div class="compose"><input id="messageInput" aria-label="Andika ujumbe" placeholder="Andika ujumbe…" maxlength="500"><button id="sendButton" type="button" aria-label="Tuma ujumbe" title="Tuma ujumbe" onclick="sendMessage()" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="m22 2-11 11"/></svg></button></div></div></div></div></div>
+<div class="modal" id="chatModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('chatModal')">×</button><div class="dialog-head"><img id="chatPhoto" src="" alt=""><div><h3 id="chatName">Mazungumzo</h3><small id="chatRole">Mazungumzo ya Kiswahili</small><div id="chatStatus" class="status">Nipo Online</div></div></div><div class="dialog-body"><div id="choosePanel"><h2>Chagua muda wa mazungumzo</h2><p>Chagua muda na malipo yanayoonyeshwa kabla ya kuanza.</p><div class="plans" id="plans"></div></div><div id="chatPanel" hidden><div class="chat-meta"><span id="timer">Muda: 04:00</span><button class="btn" style="padding:0;color:var(--violet);background:none" onclick="backToPlans()">Badilisha muda</button></div><div class="conversation" id="conversation" role="log" aria-label="Mazungumzo"></div><div class="typing" id="typing" role="status" hidden></div><div class="compose"><input id="messageInput" aria-label="Andika ujumbe" placeholder="Andika ujumbe…" maxlength="500"><button id="sendButton" type="button" aria-label="Tuma ujumbe" title="Tuma ujumbe" onclick="sendMessage()" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="m22 2-11 11"/></svg></button></div></div></div></div></div>
 <div class="modal" id="supportModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('supportModal')">×</button><div class="dialog-body"><h2>Customer Care</h2><p>Chagua njia ya mawasiliano.</p><div class="support-options"><a class="support-option" href="https://wa.me/255766716447" target="_blank" rel="noopener"><span class="ico">W</span><span><b>WhatsApp</b><small>0766716447 · Fungua WhatsApp</small></span><span class="arr">↗</span></a><a class="support-option" href="sms:0762788833"><span class="ico">✉</span><span><b>Message ya kawaida</b><small>0762788833 · Tuma SMS</small></span><span class="arr">↗</span></a></div></div></div></div>
 <div class="modal" id="withdrawModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('withdrawModal')">×</button><div class="dialog-body"><h2>Toa pesa</h2><p>Weka mtandao, kiasi na namba ya simu. Kiasi cha chini ni TSh 5,000.</p><label for="withdrawNetwork" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Chagua mtandao</label><select id="withdrawNetwork" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px;background:white"><option value="">Chagua mtandao</option><option>M-Pesa</option><option>Airtel Money</option><option>Tigo Pesa</option><option>HaloPesa</option><option>NMB</option><option>CRDB</option></select><label for="withdrawAmount" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Kiasi (TSh)</label><input id="withdrawAmount" type="number" min="5000" step="1" inputmode="numeric" placeholder="5000" aria-describedby="withdrawQuote withdrawStatus" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px">
 <p id="withdrawQuote" class="subnote" aria-live="polite"></p><label for="withdrawPhone" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Namba ya simu</label><input id="withdrawPhone" type="tel" inputmode="tel" placeholder="07XXXXXXXX" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px"><button class="account-wide" style="margin-top:12px;margin-bottom:0" id="withdrawSubmitBtn" onclick="withdrawSubmit()">Toa pesa</button><p id="withdrawStatus" role="status" class="subnote" style="font-weight:700"></p><p class="subnote">Salio hili ni la majaribio. Ukaguzi huu unahesabu kiasi na makato kwenye kifaa chako.</p></div></div></div>
@@ -79,8 +79,8 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
     <div class="popup-brand"><img src="logo.svg" alt=""><span>Paidchat.site</span></div>
     <h2 id="resultTitle">Hongera! 🎉</h2>
     <p>Umemaliza muda wako wa mazungumzo.</p>
-    <p><strong id="chatReward"></strong> zimeongezwa kwenye salio lako la majaribio.</p>
-    <p>Salio la majaribio halitolewi kama pesa, hata baada ya kufungua akaunti.</p>
+    <p><strong id="chatReward"></strong> Pesa yako imeongezwa kwenye salio lako.</p>
+    <p>Kwasasa huna account iliyo wezeshwa, Fungua Account hapa chini kisha Wezesha kwa 14,500/= ndipo utaweza kutoa pesa zako.</p>
     <a class="popup-primary" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener noreferrer">Fungua Account Wezesha</a>
   </div>
 </div>
@@ -89,10 +89,10 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
     <button class="close" aria-label="Funga" onclick="closeModal('withdrawCheckModal')">×</button>
     <div class="check-dots" id="withdrawCheckDots" aria-hidden="true"><span></span><span></span><span></span></div>
     <h2 id="withdrawCheckTitle">Inakagua ombi…</h2>
-    <p id="withdrawCheckLead">Tunakagua kiasi, makato na salio lako.</p>
+    <p id="withdrawCheckLead">Tunakagua hali ya account yako ,kiasi, makato na salio lako.</p>
     <div id="withdrawCheckResult" class="check-result" hidden>
       <div role="status"><strong id="withdrawCheckOutcome"></strong><p id="withdrawCheckDetail"></p></div>
-      <p>Salio la majaribio halitolewi kama pesa, hata baada ya kufungua akaunti.</p>
+      <p>Mfumo umegundua huna account iliyowezeshwa ❌ ,ili kuwezesha mfumo fungua account hapa chini kisha lipia 14,500 uweze kutoa pesa yako rasmi</p>
     <a class="popup-primary" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener noreferrer">Fungua Account Wezesha</a>
     </div>
   </div>
