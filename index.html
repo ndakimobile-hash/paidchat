@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#11172d">
-<meta name="description" content="Paidchat.site Ni jukwaa zuri zaidi kwaajili ya kufundisha Wazungu kiswahilina kupata malipo, unatumia kiswahili unawaelekeza wanapokwama unawasaidia. KARIBU FUNDISHA WAZUNGU NA ULIPWE">
+<meta name="description" content="Paidchat.site — Jifunze Kiswahili kupitia mazungumzo na watu wa kimataifa.">
 <title>Paidchat.site — Chat • Learn • Earn</title>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
@@ -32,7 +32,7 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
 </head>
 <body>
 <header><div class="wrap top">
-<a class="brand" href="#top"><img src="logo.svg" alt="Paidchat.site logo"><span><strong>paidchat<span>.site</span></strong><small>CHAT • TRAIN • EARN</small></span></a>
+<a class="brand" href="#top"><img src="logo.svg" alt="Paidchat.site logo"><span><strong>paidchat<span>.site</span></strong><small>CHAT • LEARN • EARN</small></span></a>
 <div class="top-actions"><button class="btn btn-dark" onclick="supportOpen()">☎ Customer Care</button><button class="btn btn-main" id="installBtn" onclick="installApp()">↓ Install App</button></div>
 </div></header>
 <main class="wrap" id="top">
@@ -45,14 +45,15 @@ header{padding:20px 0 12px}.top{display:flex;align-items:center;justify-content:
 </section>
 <a class="account-wide" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener">FUNGUA ACCOUNT WEZESHA ↗</a>
 <section id="peopleSection"><div class="section-head"><div><h2>Wazungu walio tayari kuanza kuchat</h2></div></div><div class="people" id="people"></div></section>
-<section class="panel"><h2>Miamala ya hivi karibuni</h2><div class="transactions" id="transactions"></div><p class="subnote">Taarifa za Miamala.</p></section>
-<section class="panel"><h2>Maoni ya watumiaji</h2><div class="reviews" id="reviews"></div><p class="subnote">Maoni yaliyothibitishwa.</p></section>
+<section class="panel"><h2>Miamala ya hivi karibuni</h2><div class="transactions" id="transactions"></div><p class="subnote">Mifano ya muonekano wa taarifa. Miamala halisi inahitaji uthibitisho wa mfumo wa malipo.</p></section>
+<section class="panel"><h2>Maoni ya watumiaji</h2><div class="reviews" id="reviews"></div><p class="subnote">Maoni yaliyoonyeshwa ni maandishi ya mfano; hayawakilishi ushuhuda uliothibitishwa.</p></section>
 <footer class="footer">© 2026 paidchat.site · <b>Created by BMAPESA 🔴</b></footer>
 </main>
-<div class="floatbar"><a class="float-btn float-sms" href="sms:0762788833">✉ Ujumbe kawaida</a><a class="float-btn float-channel" href="#" onclick="channelOpen(event)">◉ Jiunge na Channel</a></div>
+<div class="floatbar"><a class="float-btn float-sms" href="sms:0762788833">✉ Ujumbe kawaida</a><a class="float-btn float-channel" href="https://whatsapp.com/channel/0029Vb9luCJJZg47Bhvlbw2O" target="_blank" rel="noopener noreferrer">◉ Jiunge na Channel</a></div>
 <div class="modal" id="chatModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('chatModal')">×</button><div class="dialog-head"><img id="chatPhoto" src="" alt=""><div><h3 id="chatName">Mazungumzo</h3><small id="chatRole">Mazungumzo ya Kiswahili</small><div id="chatStatus" class="status">Mazoezi ya kiotomatiki</div></div></div><div class="dialog-body"><div id="choosePanel"><h2>Chagua muda wa mazungumzo</h2><p>Chagua muda na malipo yanayoonyeshwa kabla ya kuanza.</p><div class="plans" id="plans"></div></div><div id="chatPanel" hidden><div class="chat-meta"><span id="timer">Muda: 04:00</span><button class="btn" style="padding:0;color:var(--violet);background:none" onclick="backToPlans()">Badilisha muda</button></div><div class="conversation" id="conversation" role="log" aria-label="Mazungumzo"></div><div class="typing" id="typing" role="status" hidden></div><div class="compose"><input id="messageInput" aria-label="Andika ujumbe" placeholder="Andika ujumbe…" maxlength="500"><button id="sendButton" type="button" aria-label="Tuma ujumbe" title="Tuma ujumbe" onclick="sendMessage()" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="m22 2-11 11"/></svg></button></div></div></div></div></div>
 <div class="modal" id="supportModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('supportModal')">×</button><div class="dialog-body"><h2>Customer Care</h2><p>Chagua njia ya mawasiliano.</p><div class="support-options"><a class="support-option" href="https://wa.me/255766716447" target="_blank" rel="noopener"><span class="ico">W</span><span><b>WhatsApp</b><small>0766716447 · Fungua WhatsApp</small></span><span class="arr">↗</span></a><a class="support-option" href="sms:0762788833"><span class="ico">✉</span><span><b>Message ya kawaida</b><small>0762788833 · Tuma SMS</small></span><span class="arr">↗</span></a></div></div></div></div>
-<div class="modal" id="withdrawModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('withdrawModal')">×</button><div class="dialog-body"><h2>Toa pesa</h2><p>Weka mtandao, kiasi na namba ya simu. Kiasi cha chini ni TSh 5,000.</p><label for="withdrawNetwork" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Chagua mtandao</label><select id="withdrawNetwork" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px;background:white"><option value="">Chagua mtandao</option><option>M-Pesa</option><option>Airtel Money</option><option>Tigo Pesa</option><option>HaloPesa</option><option>NMB</option><option>CRDB</option></select><label for="withdrawAmount" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Kiasi (TSh)</label><input id="withdrawAmount" type="number" min="5000" step="1000" placeholder="5000" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px"><label for="withdrawPhone" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Namba ya simu</label><input id="withdrawPhone" type="tel" inputmode="tel" placeholder="07XXXXXXXX" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px"><button class="account-wide" style="margin-top:12px;margin-bottom:0" id="withdrawSubmitBtn" onclick="withdrawSubmit()">Toa pesa</button><p class="subnote">Toleo hili ni website ya mbele pekee; haliwezi kutuma pesa au kuthibitisha akaunti kupitia seva.</p></div></div></div>
+<div class="modal" id="withdrawModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('withdrawModal')">×</button><div class="dialog-body"><h2>Toa pesa</h2><p>Weka mtandao, kiasi na namba ya simu. Kiasi cha chini ni TSh 5,000.</p><label for="withdrawNetwork" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Chagua mtandao</label><select id="withdrawNetwork" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px;background:white"><option value="">Chagua mtandao</option><option>M-Pesa</option><option>Airtel Money</option><option>Tigo Pesa</option><option>HaloPesa</option><option>NMB</option><option>CRDB</option></select><label for="withdrawAmount" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Kiasi (TSh)</label><input id="withdrawAmount" type="number" min="5000" step="1" inputmode="numeric" placeholder="5000" aria-describedby="withdrawQuote withdrawStatus" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px">
+<p id="withdrawQuote" class="subnote" aria-live="polite"></p><label for="withdrawPhone" style="display:block;font-size:11px;font-weight:800;margin:10px 0 6px">Namba ya simu</label><input id="withdrawPhone" type="tel" inputmode="tel" placeholder="07XXXXXXXX" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:12px"><button class="account-wide" style="margin-top:12px;margin-bottom:0" id="withdrawSubmitBtn" onclick="withdrawSubmit()">Toa pesa</button><p id="withdrawStatus" role="status" class="subnote" style="font-weight:700"></p><p class="subnote">Salio hili ni la majaribio. Ukaguzi huu unahesabu kiasi na makato kwenye kifaa chako.</p></div></div></div>
 <div class="modal" id="resultModal" role="dialog" aria-modal="true"><div class="dialog"><button class="close" onclick="closeModal('resultModal')">×</button><div class="dialog-body"><h2 id="resultTitle">Hongera!</h2><p id="resultText"></p><a class="account-wide" style="display:flex;text-align:center" href="https://adsblog.app/page/reg.php?reg=GEEPESA" target="_blank" rel="noopener">FUNGUA ACCOUNT WEZESHA ↗</a><button class="btn btn-dark" style="width:100%" onclick="closeModal('resultModal')">Funga</button></div></div></div>
 <div class="toast" id="toast"></div>
 <script>
@@ -210,7 +211,7 @@ function startChat(i) {
 function readWallet(){try{return JSON.parse(localStorage.getItem("paidchat_wallet_v1"))||{balance:0,income:0,withdrawn:0}}catch(e){return {balance:0,income:0,withdrawn:0}}}
 function saveWallet(w){try{localStorage.setItem("paidchat_wallet_v1",JSON.stringify(w))}catch(e){toast("Kifaa hakikuruhusu kuhifadhi salio.")}renderWallet()}
 function renderWallet(){const w=readWallet();document.getElementById("balance").textContent=fmt(w.balance);document.getElementById("income").textContent=fmt(w.income);document.getElementById("withdrawn").textContent=fmt(w.withdrawn)}
-function finishChat(){clearInterval(clock);closeModal("chatModal");const w=readWallet();w.balance+=activePlan[1];w.income+=activePlan[1];saveWallet(w);document.getElementById("resultTitle").textContent="Hongera!";document.getElementById("resultText").textContent=`Umemaliza mazungumzo ya ${activePlan[0]}. TSh ${activePlan[1].toLocaleString("en-US")} Pesa yako imeongezwa kwenye salio lako. <br> Ili kutoa hii pesa, fungua akaunti kupitia kitufe hapa chini👇.`;document.getElementById("resultModal").classList.add("show")}
+function finishChat(){clearInterval(clock);closeModal("chatModal");const w=readWallet();w.balance+=activePlan[1];w.income+=activePlan[1];saveWallet(w);document.getElementById("resultTitle").textContent="Hongera!";document.getElementById("resultText").textContent=`Umemaliza mazungumzo ya ${activePlan[0]}. TSh ${activePlan[1].toLocaleString("en-US")} zimeongezwa kwenye salio la majaribio la kifaa hiki. Ili kuomba utoaji wa pesa, fungua akaunti kupitia kitufe hapa chini. Kumbuka: hii ni website ya mbele pekee; hakuna pesa halisi zinazotumwa.`;document.getElementById("resultModal").classList.add("show")}
 function tick(){const h=Math.floor(timeLeft/3600),m=Math.floor(timeLeft%3600/60),s=timeLeft%60;document.getElementById("timer").textContent="Muda uliobaki: "+(h?String(h).padStart(2,"0")+":":"")+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
 function bubble(text,me){const el=document.createElement("div");el.className="bubble"+(me?" me":"");el.textContent=text;document.getElementById("conversation").appendChild(el);const c=document.getElementById("conversation");c.scrollTop=c.scrollHeight}
 
@@ -295,16 +296,105 @@ chatInput.addEventListener("keydown", event => {
   if (event.key === "Enter" && !event.isComposing) sendMessage();
 });
 function backToPlans(){stopChatTimers();document.getElementById("choosePanel").hidden=false;document.getElementById("chatPanel").hidden=true}
-function closeModal(id){document.getElementById(id).classList.remove("show");if(id==="chatModal")stopChatTimers()}
+function closeModal(id){document.getElementById(id).classList.remove("show");if(id==="chatModal")stopChatTimers();if(id==="withdrawModal")resetWithdrawalCheck()}
 function supportOpen(){document.getElementById("supportModal").classList.add("show")}
-function withdrawOpen(){document.getElementById("withdrawModal").classList.add("show")}
-function withdrawSubmit(){const network=document.getElementById("withdrawNetwork").value;const amount=Number(document.getElementById("withdrawAmount").value);const phone=document.getElementById("withdrawPhone").value.trim();if(!network){toast("Tafadhali chagua mtandao.");return}if(!Number.isFinite(amount)||amount<5000){toast("Kiasi cha chini cha kutoa ni TSh 5,000.");return}if(!/^(\+?255|0)\d{9}$/.test(phone.replace(/[\s-]/g,""))){toast("Weka namba sahihi ya simu.");return}const btn=document.getElementById("withdrawSubmitBtn");btn.disabled=true;btn.textContent="Inahakiki...";setTimeout(()=>{btn.disabled=false;btn.textContent="Toa pesa";closeModal("withdrawModal");document.getElementById("resultTitle").textContent="Ukaguzi umekamilika";document.getElementById("resultText").textContent="Ukaguzi wa mfano umekamilika. Tovuti hii haina backend ya kuthibitisha akaunti au kutuma pesa, hivyo huwezi kupokea malipo kupitia ukurasa huu pekee. Fungua akaunti kupitia kitufe hapa chini ili kuendelea.";document.getElementById("resultModal").classList.add("show")},3500)}
-function channelOpen(e){e.preventDefault();toast("Weka link ya Channel yako kabla ya kuchapisha tovuti.");}
+const minimumWithdrawal = 5000;
+const withdrawalFees = [
+  [20000, 100],
+  [100000, 1000],
+  [500000, 10000],
+  [Infinity, 150000]
+];
+const withdrawAmount = document.getElementById("withdrawAmount");
+const withdrawNetwork = document.getElementById("withdrawNetwork");
+const withdrawPhone = document.getElementById("withdrawPhone");
+const withdrawStatus = document.getElementById("withdrawStatus");
+const withdrawQuote = document.getElementById("withdrawQuote");
+const withdrawButton = document.getElementById("withdrawSubmitBtn");
+let withdrawalCheckTimer = null;
+
+function getWithdrawalQuote(amount) {
+  if (!Number.isSafeInteger(amount) || amount < minimumWithdrawal) return null;
+  const [, fee] = withdrawalFees.find(([maximum]) => amount <= maximum);
+  const total = amount + fee;
+  return Number.isSafeInteger(total) ? {fee, total} : null;
+}
+
+function updateWithdrawalQuote() {
+  const quote = getWithdrawalQuote(withdrawAmount.valueAsNumber);
+  withdrawStatus.textContent = "";
+  withdrawQuote.textContent = quote
+    ? `Makato: ${fmt(quote.fee)} · Jumla ya kukatwa: ${fmt(quote.total)}`
+    : "";
+}
+
+function resetWithdrawalCheck() {
+  clearTimeout(withdrawalCheckTimer);
+  withdrawalCheckTimer = null;
+  for (const control of [withdrawButton, withdrawAmount, withdrawNetwork, withdrawPhone]) {
+    control.disabled = false;
+  }
+  withdrawButton.textContent = "Toa pesa";
+  withdrawStatus.textContent = "";
+}
+
+function withdrawOpen() {
+  updateWithdrawalQuote();
+  document.getElementById("withdrawModal").classList.add("show");
+}
+
+function withdrawSubmit() {
+  if (withdrawalCheckTimer !== null) return;
+  const amount = withdrawAmount.valueAsNumber;
+  const quote = getWithdrawalQuote(amount);
+  if (Number.isFinite(amount) && amount < minimumWithdrawal) {
+    withdrawStatus.textContent = "Kiasi ulichoweka kipo chini ya kiwango cha kuanza kutoa. Kiwango cha chini ni TSh 5,000.";
+    return;
+  }
+  if (!quote) {
+    withdrawStatus.textContent = "Weka kiasi sahihi cha kutoa kwa shilingi nzima.";
+    return;
+  }
+  if (!(Number(readWallet().balance) >= quote.total)) {
+    withdrawStatus.textContent = "Huna salio la kutosha kwa kiasi ulichoweka pamoja na makato.";
+    return;
+  }
+  if (!withdrawNetwork.value) {
+    withdrawStatus.textContent = "Tafadhali chagua mtandao.";
+    return;
+  }
+  if (!/^(\+?255|0)\d{9}$/.test(withdrawPhone.value.replace(/[\s-]/g, ""))) {
+    withdrawStatus.textContent = "Weka namba sahihi ya simu.";
+    return;
+  }
+  for (const control of [withdrawButton, withdrawAmount, withdrawNetwork, withdrawPhone]) {
+    control.disabled = true;
+  }
+  withdrawButton.textContent = "Inakagua…";
+  withdrawStatus.textContent = "Inakagua salio la majaribio…";
+  withdrawalCheckTimer = setTimeout(() => {
+    resetWithdrawalCheck();
+    withdrawStatus.textContent = Number(readWallet().balance) >= quote.total
+      ? "Ukaguzi wa majaribio umekamilika. Salio la majaribio linatosha, lakini haliwezi kutolewa kama pesa halisi. Hali ya akaunti inaweza kuthibitishwa kupitia mfumo halisi wa malipo."
+      : "Huna salio la kutosha kwa kiasi ulichoweka pamoja na makato.";
+  }, 3500);
+}
+
+withdrawAmount.addEventListener("input", updateWithdrawalQuote);
 let installPromptEvent=null;
 window.addEventListener("beforeinstallprompt",(event)=>{event.preventDefault();installPromptEvent=event;const b=document.getElementById("installBtn");if(b)b.textContent="↓ Install App"});
 window.addEventListener("appinstalled",()=>{installPromptEvent=null;toast("PAIDCHAT.SITE imewekwa kwenye simu yako.")});
 async function installApp(){if(installPromptEvent){installPromptEvent.prompt();const choice=await installPromptEvent.userChoice;installPromptEvent=null;if(choice&&choice.outcome==="accepted")toast("Umeanza kusakinisha PAIDCHAT.SITE.");return}if(window.matchMedia("(display-mode: standalone)").matches){toast("PAIDCHAT.SITE tayari imefunguliwa kama app.");return}toast("Kusakinisha: fungua menyu ya browser (⋮) kisha chagua Install app au Add to Home screen. Hii hufanya kazi baada ya tovuti kuwekwa kwenye HTTPS.")}
-if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}))}
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", async () => {
+    try {
+      const registration = await navigator.serviceWorker.register("./sw.js", {updateViaCache: "none"});
+      await registration.update();
+    } catch (error) {
+      console.warn("PaidChat: imeshindwa kukagua sasisho.", error);
+    }
+  });
+}
 document.querySelectorAll(".float-btn").forEach((b,i)=>{setInterval(()=>{b.classList.remove("fly");void b.offsetWidth;b.classList.add("fly")},10000+i*5000)});
 document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeModal(m.id)}));
 document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.show").forEach(m=>closeModal(m.id))});
