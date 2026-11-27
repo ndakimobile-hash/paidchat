@@ -1,20 +1,16 @@
-PAIDCHAT.SITE — Static website / PWA preview
+PaidChat.site · Mfumo wa majaribio kwa Cloudflare Pages
 
-FILES
-- index.html: website interface and client-side chat simulation
-- logo.svg: site logo
-- manifest.webmanifest: installable web app settings
-- sw.js: service worker for app shell/offline loading
-- icons/: Android/PWA icons
+1. Fungua ZIP. Pakia faili na folda zote kutoka ndani ya ZIP kwenye mzizi wa repo mpya.
+2. Unganisha repo na Cloudflare Pages. Chagua Framework preset: None.
+   Acha Build command wazi na weka Build output directory kuwa ".".
+   Folda functions inahitajika ili login na API ya dashboard zifanye kazi.
+3. Kwenye Settings ya project, weka secrets hizi kwenye mazingira utakayotumia:
+   DASHBOARD_PASSWORD: Chagua nenosiri lenye angalau herufi 12.
+   DASHBOARD_SESSION_SECRET: Tumia thamani tofauti ya nasibu yenye angalau herufi 32.
+4. Unda D1 database. Iunganishe kwenye project kwa jina PAIDCHAT_DB.
+   Jedwali linaundwa lenyewe wakati API inapotumika kwa mara ya kwanza.
+5. Fanya deploy upya. Fungua /dashboard/login au bonyeza PaidChat juu.
+   Username: Geepesa01. Password ni thamani uliyoweka kwenye DASHBOARD_PASSWORD.
+6. Unganisha paidchat.site kwenye Custom domains za project ukitaka kuiweka live.
 
-LOCAL PREVIEW
-Open index.html in a browser to inspect the website. Install prompts and service worker installation require the site to be served over HTTPS (or localhost). When deployed to an HTTPS domain, Android Chrome can offer Install app; on iPhone Safari use Share > Add to Home Screen.
-
-IMPORTANT LIMITATIONS
-- This project has no backend, login database, live chat service, or payment provider.
-- Chat replies are generated locally for preview.
-- The wallet is saved with localStorage on this browser/device only. Clearing browser site data can erase it; it does not sync between devices.
-- The online number is an animated visual counter, not a live verified user count.
-- Finishing a chat adds a simulated amount to the local demo balance; it is not a real payment.
-- Withdraw flow is a front-end verification message only and does not send money or validate an account on a server.
-- Profile photos and transaction/review content are sample presentation content and should not be represented as verified real users or payments.
+Chat, salio na miamala ni ya majaribio. Kiungo cha usajili kinafungua FurusaWeb.

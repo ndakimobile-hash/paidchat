@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light;
+  --ink: #091b37;
+  --navy: #16243d;
+  --card: #253b5c;
+  --ice: #d5e6ff;
+  --page: #8fa9d9;
+  --muted: #213c62;
+  --surface: #e0ecff;
+  --line: #6685b9;
+  --accent: #618afc;
+  --action: linear-gradient(112deg, #7098ff, var(--accent));
+  background: var(--page);
+  color: var(--ink);
+}
+
+body { background: var(--page); }
+header, footer { background: var(--navy); color: var(--ice); }
+header .logo, header .logo span { color: var(--ice); animation: none; }
+header #menu { background: transparent; color: var(--ice); border-color: #526f96; }
+.demo-badge {
+  padding: 5px 9px;
+  border-radius: 7px;
+  background: #a6c4ff;
+  color: var(--ink);
+  font-weight: 850;
+  font-size: .71rem;
+  letter-spacing: .09em;
+}
+
+button, .action, footer button, footer a {
+  background: var(--card);
+  color: var(--ice);
+  border-color: var(--line);
+}
+.toolbar .text-button { color: var(--ink); background: transparent; }
+.hero {
+  padding-inline: 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+}
+.hero h1, .hero .status, .account-notification p, .account-notification strong { color: var(--ink); }
+.hero h1 { font-size: clamp(1.45rem, 5.8vw, 2.55rem); line-height: 1.13; letter-spacing: -.025em; }
+.hero.lit::before, .register.lit::before { display: none; }
+.hero.account-notification { padding-inline: 16px; background: #aec5ef; border: 1px solid var(--line); }
+
+.wallet {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.wallet-income, .wallet-balance {
+  padding: clamp(13px, 4vw, 24px);
+  border-radius: 15px;
+  background: var(--card);
+  color: var(--ice);
+}
+.wallet small { color: var(--ice); font-weight: 700; }
+.wallet strong { font-size: clamp(1.2rem, 5vw, 2rem); overflow-wrap: anywhere; }
+.wallet > .wallet-withdraw, .wallet > .wallet-actions { grid-column: 1 / -1; }
+.wallet-withdraw, .register, .gold-action, .support-button, .withdraw-register, dialog .primary {
+  background: var(--action);
+  color: var(--ink);
+  border-color: #6489e8;
+  box-shadow: none;
+}
+.wallet-withdraw, .register { min-height: 52px; font-weight: 800; }
+.register span { color: var(--ink); animation: none; }
+
+.card { background: var(--card); color: var(--ice); }
+.card .meta, .card small, .card .status { color: var(--ice); }
+.card .start-chat { background: #354c74; color: var(--ice); border-color: #7699ce; }
+.typing-notice { background: var(--card); color: var(--ice); border-color: var(--line); }
+.typing-notice em, .typing-notice small, .typing-dots { color: var(--ice); }
+body .transaction-notice {
+  background: #7894fa;
+  color: var(--ink);
+  border: 1px solid #9ab4ff;
+}
+body .transaction-notice strong, body .sms-app-row,
+body .sms-demo-content p, body .sms-demo-icon { color: var(--ink); }
+
+nav, dialog, .contact-card, .channel-card,
+body #chat-notice, body #withdraw-notice {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+dialog::backdrop { background: #0b1728a8; }
+#chat-form, .thread, .withdraw-summary, .demo-record, .chat-locked, .fee-summary {
+  background: #c9ddff;
+  color: var(--ink);
+}
+.bubble, .bubble.mine { background: var(--card); color: var(--ice); }
+.contact-card p, dialog .meta, .practice-note, .demo-info { color: var(--muted); }
+dialog input, dialog select { background: #f4f8ff; color: var(--ink); border-color: var(--line); }
+footer .footer-sms, footer .footer-channel { background: var(--card); color: var(--ice); }
+html .lg-channel-top, html #lg-channel-invite .lg-invite-join,
+html #lg-support-dialog #lg-support-close {
+  background: var(--action);
+  color: var(--ink);
+  border-color: #a6c4ff;
+}
+html #lg-support-button {
+  background: var(--card);
+  color: var(--ice);
+  border-color: #829dcc;
+  text-shadow: none;
+  animation: none;
+  box-shadow: 0 8px 25px #10203a40;
+}
+html #lg-support-button::before, html #lg-support-button::after { display: none; }
+html #lg-channel-invite, html #lg-support-dialog { background: var(--navy); color: var(--ice); border-color: #83a9ea; }
+html #lg-support-dialog .lg-support-options a { background: var(--card); color: var(--ice); }
+html #lg-channel-invite h2, html #lg-channel-invite p, html #lg-channel-invite .lg-invite-later { color: var(--ice); }
+:focus-visible { outline: 3px solid #2955ab; outline-offset: 3px; }
