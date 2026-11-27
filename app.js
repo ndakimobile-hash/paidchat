@@ -45,7 +45,7 @@ function renderProfiles() {
       <div class="profile-head"><img class="avatar portrait" src="${profile.portrait}" width="44" height="44" alt="" loading="lazy"><div><strong>${profile.name}</strong><div class="meta"><img class="country-flag" src="${profile.flag}" width="22" height="16" alt=""> ${profile.country} · ${profile.skill}</div></div></div>
       <span class="status"><i></i>Online</span>
       <span class="typing">${index === typing ? '<em>typing…</em> · ' : ''}</span>
-      <select aria-label="Muda na malipo ya majaribio ya ${profile.name}">${profile.options.map(([minutes, usd], n) => `<option value="${n}">Dakika ${minutes} · $${usd} ≈ ${money(usd * exchangeRate)}</option>`).join('')}</select>
+      <select aria-label="Muda na malipo halisi ya ${profile.name}">${profile.options.map(([minutes, usd], n) => `<option value="${n}">Dakika ${minutes} · $${usd} ≈ ${money(usd * exchangeRate)}</option>`).join('')}</select>
       <button class="primary start-chat" data-profile="${id}" aria-label="Anza Chat na ${profile.name}"><span class="start-icon" aria-hidden="true">💬</span> Anza Kuchat</button>
     </article>`;
   }).join('');
@@ -83,14 +83,14 @@ byId('withdraw-home').onclick = () => {
   byId('withdraw-notice').close();
   window.scrollTo(0, 0);
 };
-const formNote = '<p>Fungua fomu ya usajili kwenye FurusaWeb kupitia kiungo hiki. PaidChat inaonyesha mazungumzo na salio la majaribio.</p>';
+const formNote = '<p>Fungua fomu ya usajili kwenye mfumo kisha ukiwa na Account utaweza kuchat na kulipwa.</p>';
 byId('chat-notice-actions').innerHTML = formLink;
 byId('dismiss-chat-notice').onclick = byId('resume-chat').onclick = () => chatNotice.close();
 
 const screens = {
   form: ['Jaza fomu ya mfumo', formNote + '<div class="actions">' + formLink + '</div>'],
   how: ['Namna mfumo unavyofanya kazi', '<p>Chagua Mzungu wa kuchat nae, kisha chagua muda na uanze chat.</p><p>Viwango vya TZS ni  USD 1 = TZS 2,600.</p>'],
-  faq: ['Maswali ya kawaida', '<details><summary>Ninachat na nani?</summary><p>Unafanya mazoezi ya Kiswahili kwa kutumia wasifu wa kubuni na majibu ya mfano.</p></details><details><summary>Naweza kutoa pesa?</summary><p>Salio na miamala inayoonyeshwa ni ya majaribio.</p></details>'],
+  faq: ['Maswali ya kawaida', '<details><summary>Ninachat na nani?</summary><p>Unafanya mafunzo ya kiswahili na mzungu.</p></details><details><summary>Naweza kutoa pesa?</summary></details>'],
   channel: ['Jiunge Channel', '<div class="contact-card channel-card"><strong>◉ WhatsApp Channel</strong><p>Jiunge na channel utapata taarifa zaidi za mfumo.</p><a class="gold-action" href="https://whatsapp.com/channel/0029Vb9luCJJZg47Bhvlbw2O" target="_blank" rel="noopener noreferrer">Jiunge Channel</a></div>'],
   sms: ['Tuma SMS', '<div class="contact-card"><strong>✉ PaidChat · 0762788833</strong><p>Wasiliana na msaidizi wa mfumo kwa kubonyeza👇.</p><a class="action gold-action" href="sms:+255762788833">Tuma Ujumbe</a></div>'],
   help: ['Huduma kwa Wateja', '<div class="actions"><a class="action wa" href="https://wa.me/255766716447">WhatsApp</a><a class="action sms" href="sms:+255762788833">SMS · 0762788833</a></div>']
@@ -125,7 +125,7 @@ function startChat(profile, option) {
       </button>
     </form>
     <div id="chat-locked" class="chat-locked" hidden>
-      <p>Umefikia mwisho wa chat ya majaribio. Unaweza kufungua kiungo cha usajili.</p>
+      <p>Umefikia mwisho wa chat. Unaweza kufungua kiungo cha usajili.</p>
       ${formLink}
     </div>
     <button id="finish" class="finish-practice" type="button" hidden>Ondoka</button>`);
@@ -161,7 +161,7 @@ function startChat(profile, option) {
 
     byId('chat-locked').hidden = false;
     byId('finish').hidden = false;
-    byId('chat-notice-description').textContent = `Umefikia kikomo cha mazungumzo ya majaribio na ${profile.name}. Unaweza kurudi kwenye chat au kufungua kiungo cha usajili.`;
+    byId('chat-notice-description').textContent = `Umefikia kikomo cha mazungumzo na ${profile.name}. Unaweza kurudi kwenye chat au kufungua kiungo cha usajili.`;
     chatNotice.showModal();
   });
   byId('finish').onclick = finishSession;
